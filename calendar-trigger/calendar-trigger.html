@@ -1,0 +1,29 @@
+<script type="text/javascript">
+    RED.nodes.registerType('calendar-trigger',{
+        category: 'function',
+        color: '#FFAAAA',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "white-globe.png",
+        label: function() {
+            return this.name||"calendar-trigger";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="calendar-trigger">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="calendar-trigger">
+    <p>This node uses a msg.dates object and triggers the next node on eactly this date. The msg.dates object must be an array of dates.
+	Combine it for exampe with mongodb to get dates and write them in a function to an array. </p></br>
+	
+	<p> Input:  msg.dates have to look like "dates": [ "2016-05-07T11:08:43.605Z","2016-05-07T11:09:43.605Z" ]</p>
+</script>
