@@ -18,21 +18,14 @@ module.exports = function(RED) {
 				}, function () {
 					node.log("onComplete: the job is done");
 				},
-				true, 
-				'Europe/Berlin'//dates[i].getTimezoneOffset
+				true//, 
+				//'Europe/Berlin'//dates[i].getTimezoneOffset
 				);
 				
 			}
-			//geht :)
+			//works :)
 			
-			
-			
-			
-			
-			
-			
-			
-			
+
             
         });
     }
