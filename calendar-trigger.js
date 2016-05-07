@@ -14,7 +14,6 @@ module.exports = function(RED) {
 				
 				var job = new CronJob(date, function() {
 					node.log("executing the job now");
-					msg.payload = msg.payload.toLowerCase();
 					node.send(msg);
 				}, function () {
 					node.log("onComplete: the job is done");
