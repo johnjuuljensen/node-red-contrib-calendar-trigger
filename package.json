@@ -28,7 +28,7 @@
   
   "node-red": {
     "nodes": {
-        "calendar-trigger": "calendar-trigger.js"
+        "calendar-trigger": "calendar-trigger/calendar-trigger.js"
     }
   }
 }
