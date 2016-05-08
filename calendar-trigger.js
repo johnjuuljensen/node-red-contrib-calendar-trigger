@@ -5,8 +5,8 @@ module.exports = function(RED) {
         this.on('input', function(msg) {
 		
 			var dates = msg.dates;
+
 			var CronJob = require('cron').CronJob;
-			
 			for(var i = 0; i<dates.length; i++){
 				node.log("received a date: "+dates[i]);
 				var date = new Date(dates[i]);
